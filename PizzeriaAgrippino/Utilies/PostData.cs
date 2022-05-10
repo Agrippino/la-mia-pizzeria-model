@@ -32,14 +32,18 @@ namespace PizzeriaAgrippino.Utilies
                 NuovaPizza.Add(Ereditadellanonna);
                 Pizze Fugadalfuturo = new Pizze(i, "~~/img_pizza/Fuda_Dal_Futuro.png", "Fuga da futuro", " Vellutata di zucchine, fior di latte di Agerola, salmone affumicato, ciuffetti di ricotta di fuscella, zest di limone ed olio evo.",12.00);
                 NuovaPizza.Add(Fugadalfuturo);
-                Pizze AmericanParty = new Pizze(i, "~/img_pizza/American_Party.png", "Margherita", "Becon croccante cheddar provola di Agerola salsiccia sbriciolata crunch di cipolla e salsa bbq.", 9);
-                NuovaPizza.Add(AmericanParty);
-                Pizze AmericanParty = new Pizze(i, "~/img_pizza/American_Party.png", "Margherita", "Becon croccante cheddar provola di Agerola salsiccia sbriciolata crunch di cipolla e salsa bbq.", 9);
-                NuovaPizza.Add(AmericanParty);
-                Pizze AmericanParty = new Pizze(i, "~/img_pizza/American_Party.png", "Margherita", "Becon croccante cheddar provola di Agerola salsiccia sbriciolata crunch di cipolla e salsa bbq.", 9);
-                NuovaPizza.Add(AmericanParty);
-                Pizze AmericanParty = new Pizze(i, "~/img_pizza/American_Party.png", "Margherita", "Becon croccante cheddar provola di Agerola salsiccia sbriciolata crunch di cipolla e salsa bbq.", 9);
-                NuovaPizza.Add(AmericanParty);
+                Pizze Genovesedicinghiale = new Pizze(i, "~/img_pizza/Genovese_Di_Cinghiale.png", "Genovese di cinghiale", "Genovese di cinghiale cotta a bassa temperatura per 24h, provola di agerola, scaglie di parmigiano, olio evo e basilico.", 9.00);
+                NuovaPizza.Add(Genovesedicinghiale);
+                Pizze KFC = new Pizze(i, "~/img_pizza/KFC.png", "KFC", "  Salsa aromatizzata ai peperoni, provola di Agerola, pollo impanato e fritto, chips di patate, spuma di maionese, basilico e olio evo.", 8.00);
+                NuovaPizza.Add(KFC);
+                Pizze London19 = new Pizze(i, "~/img_pizza/London_19.png", "London 1.9", "Bacon croccante, fior di latte di Agerola, all'uscita: chips di patate, fonduta di formaggio e olio evo.", 8.00);
+                NuovaPizza.Add(London19);
+                Pizze PestoePomodori = new Pizze(i, "~/img_pizza/Pesto_Pomodorini.png", "Pesto e pomodori", "Pesto di basilico, pomodorini del piennolo, provola di agerola IGP, basilico, scaglie di parmigiano e olio evo.", 9.00);
+                NuovaPizza.Add(PestoePomodori);
+                Pizze Trezucca = new Pizze(i, "~/img_pizza/Tre_Zucca.png", "Tre zucca", "Fondo della pizza con crema di zucca, zucca arrostita,tocchettini di zucca, bacon, provola IGP e olio evo.", 11.50);
+                NuovaPizza.Add(Trezucca);
+                Pizze Orangeisthenewblack = new Pizze(i, "~/img_pizza/Zuccotta.png", "Orange is the new black", "Crema di zucca, provola affummicata di agerola, melanzane arrostite, salsiccia di maialino nero sbriciolata, scaglie di parmigiano Reggiano 24 mesi, basilico e olio evo.", 8.00);
+                NuovaPizza.Add(Orangeisthenewblack);
             }
 
              //devo salvare il nuovo oggetto che ho creato dentro la lista statica così
