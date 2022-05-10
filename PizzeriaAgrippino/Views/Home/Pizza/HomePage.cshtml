@@ -1,6 +1,7 @@
-﻿@{
-    Layout = "_MioLayout";
-}
+﻿<!--diciamo a razor che modello gli arriva, cioè una lista di pizze -->
+@model List<Pizze>
+
+
 <!doctype html>
 <html lang="it">
 <head>
@@ -14,33 +15,49 @@
     <title>Agrippino's Pizza</title>
 </head>
 <body>
-   
-    <!--Parte superiore della pagina con navbar e altri elementi-->
-  
-    <!--Lista di tutte le pizze, MIGLIORARE DIMENSIONE CARD E CHIEDRE DI HOVER - CHIEDRE A BRYAN -->
+   <!--Dato che adesso abbiamo inserito il model rezor possiamo iniziare a inserire delle condizioni-->
+   <!--Attraverso if controlliamo se non ci sono post, se non ci sono risponde con un h3 altirmenti carica i post presenti nell'else-->
+@if(Model.Count() == 0)
+    {
+        <h3>Non ci sono post</h3>
+    }
+    else
+    {
+         <!--Lista di tutte le pizze, MIGLIORARE DIMENSIONE CARD E CHIEDRE DI HOVER - CHIEDRE A BRYAN -->
+         <!--Questa parte dato che la inseriamo una sola volta ed è solo lìinizo di tuto la inseriamo nell'else mentre il resto nel foreach  -->
         <div class="Container-fluid justify-content-xxl-center bg-warning bg-opacity-50 ">
             <div class="row ">
              <!--Titolo cenrrale per iniziare l'elenco-->
                     <div class= "col-12-xxl mt-2 mb-4 text-center fs-1">
                     Le nostre pizze
                     </div>
-                <!--Margherita-->
+          
+            </div>
+        </div>
+        <!--Si ripete molte volte l'inserimento della card, quindi per rednere il programma più inteligente usiamo razor che ci permette di creare un for each che legge tutte le pizze che abbiamo inserito-->
+        @foreach(Pizze ElencoPizze in Model)
+        {
+        <!--il model è una lista di post, che abbiamo inserito in alto, ricordiamo che il controller passa a quel template una lista di post completa-->
+                <!--Ricordiamo che dobbiamo inserire un ID per ogni elemento della lista perché è richiesto dal model, ogni id sarà quindi @ nome presente nell foreach.id  -->
+                <!--Cosa uguale sarà per tutti gli attributi quindi, nome, img e così via.-->
+              <!--Margherita-->
+              <div>@ElencoPizze.Id</div>
                     <div class= "col-6 ps-5 mt-3 col-xxl-6 ">
                         <div class="card mb-3 border border-dark shadow" style="max-width: 640px;">
                           <div class="row g-0">
                           <div class="col-md-4">
-                          <img src="~/img_pizza/Margherita.png" class="img-fluid rounded-start" alt="Pizza Margherita">
+                          <img src="@ElencoPizze.ImagePizza" class="img-fluid rounded-start" alt="Pizza Margherita">
                           </div>
                           <div class="col-md-8">
                           <div class="card-body">
                           <h5 class="card-title">
-                          Margherita
-                          </h5>
+                          @ElencoPizze.NamePizza
+                          </h5> 
                           <p class="card-text">
-                          Pomodoro San Marzano D.O.P., fior di latte di Agerola, basilico e olio evo.
+                          @ElencoPizze.DescriptionPizza
                           </p>
                           <p class="card-text"><small class="text-muted">
-                          4,00€</small>
+                          @ElencoPizze.PricePizza</small>
                           </p>
                           </div>
                           </div>
@@ -300,8 +317,13 @@
                           </div>
                         </div>
                     </div> 
-            </div>
-        </div>
+     }
+  }
+
+
+  
+   
           
 </body>
 </html>
+
