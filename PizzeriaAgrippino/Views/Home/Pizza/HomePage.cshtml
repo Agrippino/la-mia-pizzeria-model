@@ -38,7 +38,7 @@
         @foreach(Pizze ElencoPizze in Model)
         {
         <!--il model è una lista di post, che abbiamo inserito in alto, ricordiamo che il controller passa a quel template una lista di post completa-->
-                <!--Ricordiamo che dobbiamo inserire un ID per ogni elemento della lista perché è richiesto dal model, ogni id sarà quindi @ nome presente nell foreach.id  -->
+                <!--Ricordiamo che dobbiamo inserire un ID per ogni elemento della lista perché è richiesto dal model, ogni id sarà quindi chiocciola nome presente nell foreach.id  -->
                 <!--Cosa uguale sarà per tutti gli attributi quindi, nome, img e così via.-->
               <!--Margherita-->
               <div>@ElencoPizze.Id</div>
@@ -60,12 +60,15 @@
                           @ElencoPizze.PricePizza</small>
                           </p>
                           <!--Inseriamo qui un bottone per collegarlo al model del trova pizze che farà vedere nello specifico la pizza che desideriamo-->
+                         <!--Inseiriamo il tag "a" che serve per fare il link, questo punta al metodo dettagli, del contoller Pizze e ha un terzo parametro id che possiamo definrie-->
+                          <!--fondamentalemtne quello è un oggetto quindi facciamo new id = post.id-->
+                          <!--Ho provato questo metodo e non funziona "chicciola Url.Action("Dettagli","Pizze", new {id = Pizze.Id}) possot rovare altre informazioni di questo nella documentazione URL ACTION"-->
                           <p>
-                          <button type="button" class="btn btn-outline-success" href="">Guarda <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                          <a type="button" class="btn btn-outline-success" href="/Pizza/Dettagli/@ElencoPizze.Id">  Guarda <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                 <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                                     </svg>
-                              </button>
+                              </a>
                           </p>
                           </div>
                           </div>
