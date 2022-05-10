@@ -24,6 +24,6 @@ app.MapControllerRoute(
     name: "default",
     //Per impostare la pagina con le nostre pizze come pagina iniziale dobbiamo cambiare il controller da Home con il nome della nostra pagina (Pizze)
     //Id sa che deve andarlo a prendere dalla root perché non viene passato come query paramiters, va a prendere quindi la pizza corrispondente
-    pattern: "{controller=Pizze}/{action=Index}/{id?}");
+    pattern: "{controller=Pizza}/{action=Index}/{id?}");
 
 app.Run();
